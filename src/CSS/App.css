@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap'); 
+ html,
+ body,
+ #root,
+ .wrapper {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     background-color: #FFFAF0; 
+     font-family: 'Itim'; 
+ }  
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: lighter;
+  color: white;
+}
+  

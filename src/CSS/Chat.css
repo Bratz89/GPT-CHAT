@@ -1,0 +1,147 @@
+.TileMain {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 90%;
+    height: 100vh;
+    max-width: 1000px;
+}
+
+.TileTitle {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.ResponseText {
+    font-size: 16px;
+    font-weight: lighter;
+    border-radius: 5px;
+    height: 100%;
+    color: #ffffff;
+    background-color: #3b3f4900;
+    padding: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    scroll-behavior: smooth;
+
+}
+
+.ResponseText::-webkit-scrollbar {
+    display: none;
+}
+
+.InputFieldTile {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #3b3f49;
+    font-family: inherit;
+    width: 100%;
+    border-style: hidden;
+    border-radius: 5px;
+    transition: 0.3s all;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    resize: none;
+    overflow: hidden;
+    max-height: 300px;
+
+}
+
+.InputFieldTile:focus {
+    outline: none;
+}
+
+
+.InputButton {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #b4f794;
+    border-radius: 10px;
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.you {
+    font-weight: bold;
+    background-color: #17172500;
+    color: #71A9F7;
+}
+
+.ai {
+    font-weight: bold;
+    background-color: #17172500;
+    color: #f44c27;
+}
+
+.sendIcon {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    margin: auto;
+    margin-left: 10px;
+    margin-top: 0px;
+    color: #7c90a0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #3b3f49;
+    border-style: hidden;
+    border-radius: 5px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.sendIcon:hover {
+    background-color: #5e636f;
+}
+
+.changeRule {
+    font-family: inherit;
+    font-size: 18px;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    color: #f4f7fa;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #3b3f49;
+    border-style: hidden;
+    border-radius: 5px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.changeRule:hover {
+    background-color: #5e636f;
+}
+
+.system { 
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #17171b74;
+}
+
+.user {
+    padding: 20px;
+    background-color: #3e3e5e00;
+}
+
+.assistant {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #17171b74;
+}
+.dummy{
+    color: #f9c61d;
+}
