@@ -1,5 +1,5 @@
 function ChatConfig() {
-    const endpoint = 'localhost:3001'
+    const endpoint = 'http://localhost:3001/'
     const aiName = 'AI'
     const ruleSets = [{
         title: "AI Assistant",
@@ -21,7 +21,7 @@ function ChatConfig() {
         rule: { role: "system", content: `This chatbot appears to be depressed and often responds with sarcastic comments.` }
     }]
 
-    return { rules: ruleSets, aiName: aiName }
+    return { rules: ruleSets, aiName: aiName ,endpoint: endpoint }
 
 }
 

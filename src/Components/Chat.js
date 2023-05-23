@@ -12,14 +12,14 @@ console.log(`%cUsing  GPT-3.5-TURBO`, 'color: #ff4400; font-size: larger; font-w
 
 function Chat() {
   const [loading, setLoading] = useState(false);
-  const chatCongig = ChatConfig()
-  const [aiRules, setaiRules] = useState(chatCongig.rules[0].rule)
+  const chatConfig = ChatConfig()
+  const [aiRules, setaiRules] = useState(chatConfig.rules[0].rule)
   const [message, setMessage] = useState('')
   const [apiResponse, setapiResponse] = useState([{ role: "system", content: `Open ended conversation with an AI assistant.` }])
 
   if (1 === 2) { console.log(message) } // offff...
 
-  const listRules = chatCongig.rules.map((a, i) =>
+  const listRules = chatConfig.rules.map((a, i) =>
     <option key={i} value={a.rule.content}>{a.title}</option>
   )
 
@@ -81,10 +81,12 @@ function Chat() {
   }
   async function SendQuestion(question) {
     setLoading(true);
-    let endpoint = chatCongig.endpoint
+    let endpoint = chatConfig.endpoint
+    console.log(endpoint)
 
     if (window.location.hostname === "localhost" || window.location.hostname === '127.0.0.1') {
-      endpoint = 'localhost:3001/ai'
+      console.log('Using local endpoint')
+      endpoint = 'http://localhost:3001/ai'
     }
 
     var reqHeader = new Headers()
@@ -110,21 +112,34 @@ function Chat() {
       .then(response => response.text())
       .then(result => JSON.parse(result))
       .then(result => {
-        if (result.usage && result.usage.total_tokens) {
-          console.log(`%cAI Response: (${result.usage.total_tokens} Tokens)`, `color: #f44c27; font-size: larger; font-weight: bolder`);
-          console.log(result.choices[0].message.content);
-          setapiResponse(sanitizedQuestion.concat({ role: result.choices[0].message.role, content: result.choices[0].message.content }));
+        if (result.error) {
+          console.log(`%cAI Response: (Error)`, `color: #f44c27; font-size: larger; font-weight: bolder`);
+          console.log(result.error);
+          if (result.error === 'invalid_api_key') {
+            setapiResponse(sanitizedQuestion.concat({ role: "assistant", content: "Error: Invalid API Key. Please check your API Key and try again.\nCheck https://github.com/Bratz89/GPT-CHAT/blob/main/README.md for installation" }));
+          } else {
+            setapiResponse(sanitizedQuestion.concat({ role: "assistant", content: result.error }));
+          }
           executeScroll();
-        } else {
-          console.log(`%cAI Response: (No Token Usage Information)`, `color: #f44c27; font-size: larger; font-weight: bolder`);
-          console.log(result);
-          setapiResponse(sanitizedQuestion.concat({ role: "assistant", content: result.error }));
-          executeScroll();
-        }
+        } else
+          if (result.usage && result.usage.total_tokens) {
+            console.log(`%cAI Response: (${result.usage.total_tokens} Tokens)`, `color: #f44c27; font-size: larger; font-weight: bolder`);
+            console.log(result.choices[0].message.content);
+            setapiResponse(sanitizedQuestion.concat({ role: result.choices[0].message.role, content: result.choices[0].message.content }));
+            executeScroll();
+          } else {
+            console.log(`%cAI Response: (No Token Usage Information)`, `color: #f44c27; font-size: larger; font-weight: bolder`);
+            console.log(result);
+            setapiResponse(sanitizedQuestion.concat({ role: "assistant", content: result.error }));
+            executeScroll();
+          }
       })
       .catch(error => {
-        console.log('error', error);
-        setapiResponse(sanitizedQuestion.concat({ role: "assistant", content: "Error: Something went wrong. Reload page." }));
+        console.log(error)
+        console.log('Connection failed. Please check if backend is running.');
+        setapiResponse(sanitizedQuestion.concat({ role: "assistant", content: "Error: Connection refused. Please check your network settings or try again later." }));
+        executeScroll();
+
       })
       .finally(() => setLoading(false));
   }
