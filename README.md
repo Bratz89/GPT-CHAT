@@ -84,12 +84,12 @@ GPT-CHAT:
  
 2. In ChatConfig.js "Endpoint" can be changed if you want to host the API part somewhere else.
    ```sh
-    const endpoint = 'http://localhost:3001/'
+    const endpoint = 'http://api.yoursite.com'
    ```
 
    Cors settings in the API part must be changed in app.js:
     ```sh
-     const allowedOrigins = ['https://yourfrontend.com','http://localhost:3000', 'http://127.0.0.1:3000'];
+     const allowedOrigins = ['https://yourfrontend.com'];
     ``` 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
