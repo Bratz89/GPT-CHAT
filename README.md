@@ -45,17 +45,34 @@ A template to kickstart your chat GPT app!
   ```
 
 ### Installation
-
-1. Get OpenAI API Key at [https://platform.openai.com/](https://platform.openai.com/)
-2. Clone the repo
+Frontend: 
+1. Clone the repo
    ```sh
    git clone https://github.com/bratz89/GPT-CHAT.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
- 
+3. Start the app
+   ```sh
+   npm start
+   ```
+
+Backend
+ 1. Get OpenAI API Key at [https://platform.openai.com/](https://platform.openai.com)
+ 2. Install NPM packages
+   ```sh
+   npm install
+3. Change .env file with your API key:
+   ```sh
+   OPENAI_API_KEY="YOUR_KEY_HERE"
+   ```
+4. Start the API
+   ```sh
+   npm start
+   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
