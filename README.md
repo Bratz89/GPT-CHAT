@@ -41,6 +41,7 @@ A template to kickstart your chat GPT app!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 ### Prerequisites
+* [Git](https://git-scm.com/)
 * [OpenAI API key](https://platform.openai.com)
 * [Node.js](https://nodejs.org/)
 
