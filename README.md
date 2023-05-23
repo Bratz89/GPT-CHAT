@@ -38,11 +38,8 @@ A template to kickstart your chat GPT app!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 ### Prerequisites
- 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* [OpenAI API key](https://platform.openai.com)
+* [Node.js](https://nodejs.org/)
 
 ### Installation
 Frontend: 
@@ -111,7 +108,7 @@ Daniel Bratz - daniel.bratz@live.com
 ## Acknowledgments 
 * [React Icons](https://react-icons.github.io/react-icons/search)
 * [othneildrew's Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-* [react-syntax-highlighter] (https://github.com/react-syntax-highlighter/react-syntax-highlighter)
+* [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
 * [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
