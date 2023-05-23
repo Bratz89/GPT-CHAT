@@ -28,7 +28,10 @@
 ## About The Project
 A template to kickstart your chat GPT app!
    <br />
-[![PGT-CHAT][product-screenshot]](https://prnt.sc/DQDhKn2LJ929) 
+   <br /> 
+[![PGT-CHAT][product-screenshot]](https://github.com/Bratz89/GPT-CHAT/blob/main/images/ss.png) 
+  <br />
+  <br />
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
  
@@ -72,11 +75,26 @@ Backend
 5. Start the API
    ```sh
    npm start
+   ``` 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+### Customization
+GPT-CHAT:
+1. In ChatConfig.js you can add or configure "rulesets" for the Ai assistant. Changes here will change the dropdown menu.
+ 
+2. In ChatConfig.js "Endpoint" can be changed if you want to host the API part somewhere else.
+   ```sh
+    const endpoint = 'http://localhost:3001/'
    ```
 
+   Cors settings in the API part must be changed in app.js:
+    ```sh
+     const allowedOrigins = ['https://yourfrontend.com','http://localhost:3000', 'http://127.0.0.1:3000'];
+    ``` 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-  
+
+
 ## Roadmap and known issues
 - [ ] Fix special characters bug. 
 
