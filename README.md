@@ -104,7 +104,7 @@ Daniel Bratz - daniel.bratz@live.com
 [issues-shield]: https://img.shields.io/github/issues/bratz89/GPT-Chat.svg?style=for-the-badge
 [issues-url]: https://github.com/bratz89/GPT-Chat/issues
 [license-shield]: https://img.shields.io/github/license/bratz89/GPT-Chat.svg?style=for-the-badge
-[license-url]: https://github.com/bratz89/GPT-Chat/blob/master/LICENSE.txt
+[license-url]: https://github.com/bratz89/GPT-Chat/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/daniel-bratz-7959b722a/
 [product-screenshot]:  /images/ss.png
