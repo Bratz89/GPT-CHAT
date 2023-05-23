@@ -60,15 +60,19 @@ Frontend:
    ```
 
 Backend
- 1. Get OpenAI API Key at [https://platform.openai.com/](https://platform.openai.com)
- 2. Install NPM packages
+1. Get OpenAI API Key at [https://platform.openai.com/](https://platform.openai.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/bratz89/GPT-CHAT-API.git
+   ```
+3. Install NPM packages
    ```sh
    npm install
-3. Change .env file with your API key:
+4. Change .env file with your API key:
    ```sh
    OPENAI_API_KEY="YOUR_KEY_HERE"
    ```
-4. Start the API
+5. Start the API
    ```sh
    npm start
    ```
