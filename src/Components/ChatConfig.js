@@ -11,7 +11,7 @@ function ChatConfig() {
         title: "Code generator",
         rule: { role: "system", content: `AI Code Generator. Will only answer with code.` }
     }, {
-        title: "Code explaine",
+        title: "Code explain",
         rule: { role: "system", content: `AI Code assistant.Will explain complicated pieces of code.` }
     }, {
         title: "Email assistant",

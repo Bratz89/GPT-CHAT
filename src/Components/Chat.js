@@ -81,8 +81,7 @@ function Chat() {
   }
   async function SendQuestion(question) {
     setLoading(true);
-    let endpoint = chatConfig.endpoint
-    console.log(endpoint)
+    let endpoint = chatConfig.endpoint 
 
     if (window.location.hostname === "localhost" || window.location.hostname === '127.0.0.1') {
       console.log('Using local endpoint')
